@@ -1,0 +1,38 @@
+{
+    "hacknix": {
+        "branch": "master",
+        "description": "Hackworth Ltd's nix overlays and modules.",
+        "homepage": "",
+        "owner": "hackworthltd",
+        "repo": "hacknix",
+        "rev": "c7d672f8519e58b96561309d70b5f94f58eae9c7",
+        "sha256": "0kkmm5v2shqi4xaccxnnzykg2690ki4xa5dr3w6hwnnh40p86iy9",
+        "type": "tarball",
+        "url": "https://github.com/hackworthltd/hacknix/archive/c7d672f8519e58b96561309d70b5f94f58eae9c7.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "haskell-hacknix": {
+        "branch": "master",
+        "description": "Hackworth Ltd's haskell.nix overlay.",
+        "homepage": "",
+        "owner": "hackworthltd",
+        "repo": "haskell-hacknix",
+        "rev": "e0270ede124123c3e4e945fbe014c41be1fd230f",
+        "sha256": "1nw8j0wl6428irr97z83sdlgyh356gakw12x52yh872ix2r4b0v5",
+        "type": "tarball",
+        "url": "https://github.com/hackworthltd/haskell-hacknix/archive/e0270ede124123c3e4e945fbe014c41be1fd230f.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "niv": {
+        "branch": "master",
+        "description": "Easy dependency management for Nix projects",
+        "homepage": "https://github.com/nmattia/niv",
+        "owner": "nmattia",
+        "repo": "niv",
+        "rev": "f73bf8d584148677b01859677a63191c31911eae",
+        "sha256": "0jlmrx633jvqrqlyhlzpvdrnim128gc81q5psz2lpp2af8p8q9qs",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/niv/archive/f73bf8d584148677b01859677a63191c31911eae.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
