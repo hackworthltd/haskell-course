@@ -50,6 +50,8 @@ For this exercise, answer by adding your answer (in English) to the
 corresponding comment. You don't need to write any Haskell code in
 this exercise.
 
+(Hint: use GHCi to check your answers.)
+
 1.4(a): What is the type of the value True as defined in Exercise 1.1?
 
 1.4(b): What is the type of the value true as defined in Exercise 1.2?
