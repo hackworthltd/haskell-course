@@ -36,7 +36,7 @@ common opts
   ghc-options:
     -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates
     -Wcompat -Widentities -Wredundant-constraints -fhide-source-paths
-    -fexternal-interpreter
+    -fexternal-interpreter -Wno-unused-imports
 
 common defaults
   import: deps, exts, opts
