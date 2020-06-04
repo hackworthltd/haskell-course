@@ -49,56 +49,56 @@ which contains only 12 unique values (January to December). Therefore,
 when defining these functions, we've been able to write out all of the
 equations explicitly for each input value.
 
-Now let's work with some functions that take inputs of type Int. Type
-Int contains many, many unique values, so when defining such a
+Now let's work with some functions that take inputs of type Integer. Type
+Integer contains many, many unique values, so when defining such a
 function, it's usually not possible to write out an explicit equation
 for every case. We'll need to make use of variables in most cases.
 
 To refresh your memory, recall that in Lesson2, we defined a function
-named "add" that takes two inputs of type Int and outputs a value of
-type Int whose value is produced by adding the value of the first
+named "add" that takes two inputs of type Integer and outputs a value of
+type Integer whose value is produced by adding the value of the first
 input to the value of the second input. That function's type signature
 and definition were:
 
-add :: Int -> Int -> Int
+add :: Integer -> Integer -> Integer
 add x y = x + y
 
 And when defining it, we used Haskell's built-in function named "+" to
 add the first input to the second. The + function's type signature is:
 
-(+) :: Int -> Int -> Int
+(+) :: Integer -> Integer -> Integer
 
 -}
 
 {- Exercise 2.18
 
-Define a function named "subtract" that takes two inputs of type Int,
-and outputs a value of type Int whose value is produced by subtracting
+Define a function named "subtract" that takes two inputs of type Integer,
+and outputs a value of type Integer whose value is produced by subtracting
 the value of the second input from the value of the first.
 
 Use the built-in Haskell function "-" to implement the function. Note
 that the "-" function has the type signature:
 
-(-) :: Int -> Int -> Int
+(-) :: Integer -> Integer -> Integer
 -}
 
 {- Exercise 2.19
 
-Define a function named "multiply3" that takes three inputs of type Int,
-and outputs a value of type Int whose value is produced by multiplying
+Define a function named "multiply3" that takes three inputs of type Integer,
+and outputs a value of type Integer whose value is produced by multiplying
 the value of all three input values.
 
 Use the built-in Haskell function "*" to implement the function. Note
 that the "*" function has the type signature:
 
-(*) :: Int -> Int -> Int
+(*) :: Integer -> Integer -> Integer
 
 -}
 
 {- Exercise 2.20
 
 Define a function named "multiplyAndAdd" that takes three inputs of
-type Int, and outputs a value of type Int whose value is is produced
+type Integer, and outputs a value of type Integer whose value is is produced
 by multiplying the values of the first and second inputs, then adding
 to that value the value of the third input.
 
@@ -110,7 +110,7 @@ function.
 {- Exercise 2.21
 
 Function input variables can sometimes be useful for representing
-types other than Int, as well. Let's explore that idea now.
+types other than Integer, as well. Let's explore that idea now.
 
 Though it may seem silly the first time you see it, sometimes it's
 useful to define a function that takes an input of some type (let's
@@ -154,7 +154,7 @@ function and make sure it's something descriptive. -}
 
 {- Exercise 2.23
 
-Define the identity function for values of type Int. Make the
+Define the identity function for values of type Integer. Make the
 definition as short as possible. Choose your own name for this
 function and make sure it's something descriptive. -}
 
@@ -164,8 +164,8 @@ Someone asks you to define a function called "strange" that works like
 this:
 
 - It takes 2 inputs. The first input is of type Bool, and the second
-  input is of type Int.
-- The output is of type Int.
+  input is of type Integer.
+- The output is of type Integer.
 - If the first input is False, then the output value should be 0.
 - If the first input is True and the second input value is 0, then the
   output value should be 1.

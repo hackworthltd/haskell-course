@@ -75,16 +75,17 @@ data Month = Undefined
 {- Exercise 2.5
 
 Using the Month type that you just defined, and the built-in Haskell
-type Int that you learned about in Lesson2, define a function
-"monthToInt" that takes as input a value of type Month, and outputs a
-value of type Int, but not just any Int! Each Month input value should
-produce an Int output value that corresponds to the integer that we
-use to denote that month when we define dates as integers. For
-example, January is denoted as month 1, February as month 2, etc.
+type Integer that you learned about in Lesson2, define a function
+"monthToInteger" that takes as input a value of type Month, and
+outputs a value of type Integer, but not just any Integer! Each Month
+input value should produce an Integer output value that corresponds to
+the integer that we use to denote that month when we define dates as
+integers. For example, January is denoted as month 1, February as
+month 2, etc.
 -}
 
-monthToInt :: Month -> Int
-monthToInt _ = undefined
+monthToInteger :: Month -> Integer
+monthToInteger _ = undefined
 
 {- Exercise 2.6
 
@@ -118,14 +119,14 @@ Do you think you could define this function? What problems do you
 foresee?
 
 2.7(b): Now the same person asks you to define a function that takes
-as input an Int, and outputs the Month that corresponds to the input
-Int. For example, they say, the input value 3 indicates the 3rd month
-of the year, which is March.
+as input an Integer, and outputs the Month that corresponds to the
+input Integer. For example, they say, the input value 3 indicates the
+3rd month of the year, which is March.
 
 Once again, they give you the type signature of the function, and then
 ask you to provide the definition:
 
-numberToMonth :: Int -> Month
+numberToMonth :: Integer -> Month
 numberToMonth _ = undefined
 
 Do you think you could define this function? What problems do you
