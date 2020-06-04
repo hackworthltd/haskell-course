@@ -30,6 +30,7 @@ common exts
   default-language:   Haskell2010
   default-extensions:
     NoImplicitPrelude
+    NegativeLiterals
     OverloadedStrings
 
 common opts
