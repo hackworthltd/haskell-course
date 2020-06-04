@@ -18,6 +18,7 @@ data Direction
   | Down
   | Left
   | Right
+  deriving (Show)
 
 {- Exercise 2.1
 
@@ -42,6 +43,7 @@ data Season
   | Spring
   | Summer
   | Fall
+  deriving (Show)
 
 follows :: Season -> Season
 follows _ = undefined
@@ -61,6 +63,11 @@ precedes _ = undefined
 
 Define a type called Month whose values represent the months of the
 Gregorian calendar year: January, March, etc.
+
+So that you can see the values of the Month type in GHCi, make sure
+you add "deriving (Show)" at the end of your data type declaration.
+See how we did it for the Season and Direction types above, if you're
+unsure about the syntax.
 -}
 
 data Month = Undefined
@@ -139,6 +146,7 @@ missing function type signature, as well.
 data Bool
   = True
   | False
+  deriving (Show)
 
 has31Days _ = undefined
 

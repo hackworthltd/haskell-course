@@ -12,12 +12,14 @@ solutions. -}
 data Bool
   = True
   | False
+  deriving (Show)
 
 data Season
   = Winter
   | Spring
   | Summer
   | Fall
+  deriving (Show)
 
 data Month
   = January
@@ -32,6 +34,7 @@ data Month
   | October
   | November
   | December
+  deriving (Show)
 
 {- NOTE: ****
 

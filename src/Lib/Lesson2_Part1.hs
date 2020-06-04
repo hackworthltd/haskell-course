@@ -1,3 +1,3 @@
-module Lib.Lesson2_Part1 (Int, undefined) where
+module Lib.Lesson2_Part1 (Int, Show, undefined) where
 
-import Prelude (Int, undefined)
+import Prelude (Int, Show, undefined)
