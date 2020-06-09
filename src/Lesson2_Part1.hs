@@ -11,31 +11,35 @@ lessons, or in previous exercises. When we do, we'll provide the
 definitions for those types so that you can use them in your
 solutions.
 
-Here's the Direction data type that was defined in Lesson2. -}
+Here's the Direction type that was defined in Lesson1. -}
 
 data Direction
-  = Up
-  | Down
-  | Left
-  | Right
+  = North
+  | South
+  | East
+  | West
   deriving (Show)
 
 {- Exercise 2.1
 
-When you look in the mirror, only some directions are flipped. Here's
-a function named "mirror" that takes as input a Direction, and outputs
-the corresponding mirrored direction. Complete the definition. -}
+Here's a function named "opposite" that takes as input a value of type
+Direction, and outputs a value of type Direction whose value is the
+opposite of the input value. For example, what direction is the
+opposite of north? Answer: south.
 
-mirror :: Direction -> Direction
-mirror _ = undefined
+The function type signature is already written for you; now complete
+the definition. -}
+
+opposite :: Direction -> Direction
+opposite _ = undefined
 
 {- Exercise 2.2
 
-Given the following Seasons data type that is similar (or maybe
-identical!) to the one that you defined in Exercise 1.5, define a
-function "follows" that takes a Season as input, and outputs the
-season that follows it in the yearly cycle. For example, what season
-follows spring? Answer: summer.
+Given the following Seasons type that is similar (or maybe identical!)
+to the one that you defined in Exercise 1.5, define a function
+"follows" that takes a Season as input, and outputs the season that
+follows it in the yearly cycle. For example, what season follows
+spring? Answer: summer.
 -}
 
 data Season
@@ -50,7 +54,7 @@ follows _ = undefined
 
 {- Exercise 2.3
 
-Using the Seasons data type, define a function "precedes" that takes a
+Using the Seasons type, define a function "precedes" that takes a
 Season as input, and outputs the season that comes before it in the
 yearly cycle. For example, what season precedes summer? Answer:
 spring.
@@ -65,12 +69,14 @@ Define a type called Month whose values represent the months of the
 Gregorian calendar year: January, March, etc.
 
 So that you can see the values of the Month type in GHCi, make sure
-you add "deriving (Show)" at the end of your data type declaration.
-See how we did it for the Season and Direction types above, if you're
-unsure about the syntax.
+you add "deriving (Show)" at the end of your type definition. See how
+we did it for the Season and Direction types above, if you're unsure
+about the syntax.
 -}
 
-data Month = Undefined
+data Month
+  = Undefined
+  deriving (Show)
 
 {- Exercise 2.5
 
@@ -162,8 +168,8 @@ it's all wrong: July is a winter month! they say. And they're right --
 the season a given month falls into depends on which hemisphere you're
 in.
 
-To fix the problem, first define a data type that represents the
-Earth's two hemispheres: Northern and Southern.
+To fix the problem, first define a type that represents the Earth's
+two hemispheres: Northern and Southern.
 
 Then, define a function called "globalMonthToSeason" that takes 2
 input values, one of type Month and the other of type Hemisphere
