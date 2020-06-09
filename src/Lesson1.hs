@@ -6,37 +6,37 @@ import Lib.Lesson1
 
 In Haskell, everything between {- and -} is a comment. We'll use the
 comments to guide you through the exercises. Make sure you read every
-comment carefully.
-
-In the following exercises, "undefined" is used to indicate that the
-function or type is not yet defined. In each case, your task is to
-complete the definition.
-
--}
+comment carefully! -}
 
 {- Exercise 1.1
 
-We can use Haskell's support for user-defined data types to define a
-boolean type for values that are either "true" or "false." Complete
-the Bool data type definition by replacing "Undefined" with data
-constructors for true and false, like we did for the Direction data
-type in the Lesson1 lecture.
+Define a type for boolean values, i.e., "true" and "false." Complete
+the Bool type definition below by replacing "Undefined" with values
+that correspond to true and false.
 
 Once you've defined the Bool type, you can check your work by pressing
 the green "run" button and using the GHCi ":type" command.
 
-Remember to indent the extra lines in the type definition! -}
+Remember to indent the extra lines in the type definition!
 
-data Bool = Undefined
+Also, leave the "deriving (Show)" bit at the end so that GHCi can
+display the values of your new type. -}
+
+data Bool
+  = Undefined
+  deriving (Show)
+
+{- In the following exercises about bindings, "undefined" is used in the
+binding equations to indicate that the binding equation not yet
+complete. In each case, your task is to replace "undefined" with an
+appropriate value. -}
 
 {- Exercise 1.2
 
-Sometimes it's useful to create alternative names for particular
-values. In Haskell, we can do this by writing an equation that binds a
-new name to a value that was already defined elsewhere.
-
-Complete the definitions for these convenient names for the values
-created by Bool's data constructors.
+Now let's bind the Haskell names true and false to their corresponding
+values from the Bool type we defined in Exercise 1.1. The bindings
+below already have the correct type (Bool); now complete the
+equations.
 
 Once you've completed these bindings, you can check your work by
 pressing the green "run" button, and then typing the binding names in
@@ -52,8 +52,8 @@ false = undefined
 
 Now suppose you're writing a Haskell program for a native French
 speaker. In French, "vrai" means "true," and "faux" means "false."
-Complete the definitions for these French names for Bool's data
-constructors. -}
+Complete the bindings for these French names for the values that
+belong to type Bool. -}
 
 vrai :: Bool
 vrai = undefined
@@ -63,68 +63,75 @@ faux = undefined
 
 {- Exercise 1.4
 
-For this exercise, answer by adding your answer (in English) to the
-corresponding comment. You don't need to write any Haskell code in
-this exercise.
+For this exercise, put your answer here in the comment (in English).
+You don't need to write any Haskell code in this exercise.
 
-(Hint: use GHCi to check your answers.)
+(Hint: you can use GHCi to check your answers for most of these
+questions.)
 
-1.4(a): What is the type of the value True as defined in Exercise 1.1?
-
-___Write your answer here.___
-
-1.4(b): What is the type of the value true as defined in Exercise 1.2?
+1.4(a): What type does the value True belong to?
 
 ___Write your answer here.___
 
-1.4(c): What is the type of the value vrai as defined in Exercise 1.3?
+1.4(b): What is the type of the name true, as defined in Exercise 1.2?
+
+___Write your answer here.___
+
+1.4(c): What is the type of the name vrai, as defined in Exercise 1.3?
 
 ___etc.___
 
-1.4(d): What is the type of the value False as defined in Exercise 1.1?
+1.4(d): What type does the value False belong to?
 
-1.4(e): What is the type of the value false as defined in Exercise 1.2?
+1.4(e): What is the type of the name false, as defined in Exercise
+1.2?
 
-1.4(f): What is the type of the value faux as defined in Exercise 1.3?
+1.4(f): What is the type of the name faux, as defined in Exercise 1.3?
 
-1.4(g): What is the type of the value theSkyIs (from the Lesson1
-lecture)?
+1.4(g): What is the type of the name theSunSetsInThe from Lesson1?
 
-1.4(h): What is the type of the value Up from the Lesson1 lecture?
+1.4(h): What is the value that's bound to the name theSunSetsInThe
+from Lesson1?
 
-1.4(i): What would happen if you tried to write:
+1.4(i): What is the type of the name theSunRisesInthe from Lesson1?
 
-down :: Bool
-down = Down
+1.4(h): What is the value that's bound to the name theSunRisesInThe
+from Lesson1?
 
-1.4(j): In Exercise 1.2 above, you created a new name for the value
-created by the data constructor True. What is the difference between
-the value with the name "true" and the value created by the data
-constructor True?
+1.4(j): What would happen if you tried to write this binding in
+Haskell?
 
--}
+south :: Direction
+south = True
+
+1.4(k): In Exercise 1.2, you bound a new name to the value True. What
+is the difference between the value bound to the name true and the
+value True that belongs to type Bool? -}
 
 {- Exercise 1.5
 
-1.5(a): Given the definitions above of the data type Bool, and the
-values true and vrai, are the values True, true, and vrai equivalent
-in Haskell? Explain.
+1.5(a): Given the definition of type Bool from Exercise 1.1, and the
+bindings true and vrai from Exercises 1.2 and 1.3, are the values of
+True, true, and vrai equivalent in Haskell? Explain.
 
-1.5(b): Given the definitions above of the data type Bool, and the
-values false and faux, are the values False, false, and faux
-equivalent in Haskell? Explain.
+1.5(b): Given the definition of the type Bool, and the the bindings
+false and faux, are the values of False, false, and faux equivalent in
+Haskell? Explain.
 
-1.5(c): Given the definitions above of the data type Bool, and the
-values true and vrai, are the values False, true, and vrai equivalent
-in Haskell? Explain.
+1.5(c): Given the definition of the type Bool, and the bindings true
+and vrai, are the values of False, true, and vrai equivalent in
+Haskell? Explain.
 
-1.5(d): Given the defintions above of the data type Bool, and the name
-true, does binding the name true to the value True change the value
-True? Explain.
-
--}
+1.5(d): Given the defintion of the type Bool, and the binding true,
+does binding the name vrai to the value True change the value True?
+Does it change the value bound to true? Explain. -}
 
 {- Exercise 1.6
 
-Define a Haskell data type whose values represent the 4 seasons of the
-year. Remember to indent the extra lines! -}
+Define a Haskell type whose values represent the 4 seasons of the
+year. Remember to indent the extra lines! And don't forget to add
+
+  deriving (Show)
+
+at the end of your new type definition, so that GHCi can display its
+values. -}
