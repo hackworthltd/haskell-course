@@ -85,11 +85,6 @@ Rewrite this function using wildcard patterns. Use the wildcard
 patterns to reduce it to the smallest number of equations you can.
 -}
 
-data Bool
-  = True
-  | False
-  deriving (Show)
-
 has31Days :: Month -> Bool
 has31Days _ = undefined
 
