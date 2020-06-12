@@ -44,10 +44,10 @@ well. This is a good habit to get into. -}
 
 {- So far, all of the functions you've defined in these exercises have
 taken an input type that has relatively few values. For example, the
-function "follows" from Exercise 2.2 takes an input of type Month,
-which contains only 12 unique values (January to December). Therefore,
-when defining these functions, we've been able to write out all of the
-equations explicitly for each input value.
+function "follows" from Exercise 2.1 takes an input of type Season,
+which contains only 4 unique values (Winter, Spring, Summer, and
+Fall). Therefore, when defining these functions, we've been able to
+write out all of the equations explicitly for each input value.
 
 Now let's work with some functions that take inputs of type Integer. Type
 Integer contains many, many unique values, so when defining such a
@@ -70,7 +70,7 @@ add the first input to the second. The + function's type signature is:
 
 -}
 
-{- Exercise 2.18
+{- Exercise 2.21
 
 Define a function named "subtract" that takes two inputs of type Integer,
 and outputs a value of type Integer whose value is produced by subtracting
@@ -82,7 +82,7 @@ that the "-" function has the type signature:
 (-) :: Integer -> Integer -> Integer
 -}
 
-{- Exercise 2.19
+{- Exercise 2.22
 
 Define a function named "multiply3" that takes three inputs of type Integer,
 and outputs a value of type Integer whose value is produced by multiplying
@@ -95,7 +95,7 @@ that the "*" function has the type signature:
 
 -}
 
-{- Exercise 2.20
+{- Exercise 2.23
 
 Define a function named "multiplyAndAdd" that takes three inputs of
 type Integer, and outputs a value of type Integer whose value is is produced
@@ -107,7 +107,7 @@ function.
 
 -}
 
-{- Exercise 2.21
+{- Exercise 2.24
 
 Function input variables can sometimes be useful for representing
 types other than Integer, as well. Let's explore that idea now.
@@ -146,19 +146,19 @@ of the function are provided for you. -}
 identityMonth :: Month -> Month
 identityMonth _ = undefined
 
-{- Exercise 2.22
+{- Exercise 2.25
 
 Define the identity function for values of type Season. Make the
 definition as short as possible. Choose your own name for this
 function and make sure it's something descriptive. -}
 
-{- Exercise 2.23
+{- Exercise 2.26
 
 Define the identity function for values of type Integer. Make the
 definition as short as possible. Choose your own name for this
 function and make sure it's something descriptive. -}
 
-{- Exercise 2.24
+{- Exercise 2.27
 
 Someone asks you to define a function called "strange" that works like
 this:

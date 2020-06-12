@@ -4,39 +4,41 @@ module Lesson2_Part1 where
 
 import Lib.Lesson2_Part1
 
-{- Exercises for Lesson2: Functions.
+{- Exercises for Lesson2, part 1: Functions.
 
-In this file, we'll sometimes refer to types you've seen in the
-lessons, or in previous exercises. When we do, we'll provide the
-definitions for those types so that you can use them in your
-solutions.
+In the following exercises about functions, "undefined" is used
+in the function equations to indicate that the function equation not
+yet complete. In each case, your task is to replace "undefined" with
+an appropriate equation(s).
 
-Here's the Direction type that was defined in Lesson1. -}
+You'll notice our undefined function equations also use the underscore
+character (_) where the function's input value should go. You should
+replace this underscore with the input value you want to transform.
 
-data Direction
-  = North
-  | South
-  | East
-  | West
-  deriving (Show)
-
-{- Exercise 2.1
-
-Here's a function named "opposite" that takes as input a value of type
-Direction, and outputs a value of type Direction whose value is the
-opposite of the input value. For example, what direction is the
-opposite of north? Answer: south.
-
-The function type signature is already written for you; now complete
-the definition. -}
+For example, suppose we gave you this incomplete definition of the
+function from Lesson2 part 1, "opposite":
 
 opposite :: Direction -> Direction
 opposite _ = undefined
 
-{- Exercise 2.2
+Now we ask you to complete the definition. You would this one
+undefined equation:
+
+opposite _ = undefined
+
+with these 4 complete equations:
+
+opposite North = South
+opposite South = North
+opposite East = West
+opposite West = East
+
+-}
+
+{- Exercise 2.1
 
 Given the following Seasons type that is similar (or maybe identical!)
-to the one that you defined in Exercise 1.5, define a function
+to the one that you defined in Exercise 1.6, define a function named
 "follows" that takes a Season as input, and outputs the season that
 follows it in the yearly cycle. For example, what season follows
 spring? Answer: summer.
@@ -52,68 +54,53 @@ data Season
 follows :: Season -> Season
 follows _ = undefined
 
-{- Exercise 2.3
+{- Exercise 2.2
 
-Using the Seasons type, define a function "precedes" that takes a
-Season as input, and outputs the season that comes before it in the
-yearly cycle. For example, what season precedes summer? Answer:
-spring.
+Using the Seasons type from above, define a function named "precedes"
+that takes a Season as input, and outputs the season that comes before
+it in the yearly cycle. For example, what season precedes summer?
+Answer: spring.
 -}
 
 precedes :: Season -> Season
 precedes _ = undefined
 
-{- Exercise 2.4
+{- Exercise 2.3
 
 Define a type called Month whose values represent the months of the
 Gregorian calendar year: January, March, etc.
 
 So that you can see the values of the Month type in GHCi, make sure
-you add "deriving (Show)" at the end of your type definition. See how
-we did it for the Season and Direction types above, if you're unsure
-about the syntax.
+you add "deriving (Show)" at the end of your type definition. It's
+already been added here for you, so just make sure you retain it when
+you complete the definition of the type.
 -}
 
 data Month
   = Undefined
   deriving (Show)
 
-{- Exercise 2.5
+{- Exercise 2.4
 
-Using the Month type that you just defined, and the built-in Haskell
-type Integer that you learned about in Lesson2, define a function
-"monthToInteger" that takes as input a value of type Month, and
-outputs a value of type Integer, but not just any Integer! Each Month
-input value should produce an Integer output value that corresponds to
-the integer that we use to denote that month when we define dates as
-integers. For example, January is denoted as month 1, February as
-month 2, etc.
--}
-
-monthToInteger :: Month -> Integer
-monthToInteger _ = undefined
-
-{- Exercise 2.6
-
-Using the Month and Season types that you defined earlier, define a
-function called "monthToSeason" that takes as input a value of type
-Month, and outputs a value of type Season in which that month falls.
-For example, the month of July is summer.
+Using the Month and Season types from above, define a function named
+"monthToSeason" that takes as input a value of type Month, and outputs
+a value of type Season in which that month falls. For example, the
+month of July is summer.
 
 Note that some months mark the official change of one season to the
 next, so you'll need to pick one season or the other for these months:
-which one is up to you.
+which one is up to you!
 -}
 
 monthToSeason :: Month -> Season
 monthToSeason _ = undefined
 
-{- Exercise 2.7
+{- Exercise 2.5
 
 For these questions, you don't need to write any Haskell code; just
 answer in English here in the comment.
 
-2.7(a): Suppose someone asks you to define a function that takes as
+2.5(a): Suppose someone asks you to define a function that takes as
 input a value of type Season, and outputs a value of type Month that
 the season corresponds to. They even give you the type signature of
 this function, and then ask you to provide the definition:
@@ -124,31 +111,19 @@ seasonToMonth _ = undefined
 Do you think you could define this function? What problems do you
 foresee?
 
-2.7(b): Now the same person asks you to define a function that takes
-as input an Integer, and outputs the Month that corresponds to the
-input Integer. For example, they say, the input value 3 indicates the
-3rd month of the year, which is March.
-
-Once again, they give you the type signature of the function, and then
-ask you to provide the definition:
-
-numberToMonth :: Integer -> Month
-numberToMonth _ = undefined
-
-Do you think you could define this function? What problems do you
-foresee?
 -}
 
-{- Exercise 2.8
+{- Exercise 2.6
 
 Define a function named "has31Days" that, given a Month, outputs True
-if the month has 31 days, and False otherwise. Use a wildcard pattern
-to make your function definition as short as possible.
+if the month has 31 days, and False otherwise.
 
 Note that, for this exercise, we've given you just the incomplete
 function definition, but not the function type signature. Provide the
 missing function type signature, as well.
--}
+
+We've provided the type definition for type Bool below, which you can
+use in your answer. -}
 
 data Bool
   = True
@@ -157,75 +132,53 @@ data Bool
 
 has31Days _ = undefined
 
-{- Exercise 2.9
-
-In Exercise 2.6, you defined a function called "monthToSeason" that,
-given a value of type Month as input, outputs a value of type Season
-that corresponds to that calendar month's season of the year.
-
-Suppose someone from Australia uses your function and complains that
-it's all wrong: July is a winter month! they say. And they're right --
-the season a given month falls into depends on which hemisphere you're
-in.
-
-To fix the problem, first define a type that represents the Earth's
-two hemispheres: Northern and Southern.
-
-Then, define a function called "globalMonthToSeason" that takes 2
-input values, one of type Month and the other of type Hemisphere
-(which you just defined), and outputs a value of type Season.
-
-Here we provide you with the incomplete definition for function
-"globalMonthToSeason", but you'll need to provide the rest.
--}
-
-globalMonthToSeason _ _ = undefined
-
-{- Exercise 2.10
-
-Consider the function that you defined in the previous exercise,
-"globalMonthToSeason". You probably had to write quite a few equations
-to define it! Is there a way to reduce the number of equations
-required using pattern wildcards? If so, write the shorter definition;
-if not, explain why pattern wildcards can't help you here.
-
--}
-
-{- Exercise 2.11
+{- Exercise 2.7
 
 For these questions, you don't need to write any Haskell code; just
 answer in English here in the comment.
 
 (Hint: use GHCi to check your answers.)
 
-2.11(a): What is the type of function you defined in Exercise 2.2, "follows"?
+2.7(a): What is the type of function you defined in Exercise 2.1, "follows"?
 
-2.11(b): What is the type of the function you defined in Exercise 2.9, "globalMonthToSeason"?
-
-2.11(c): What is the type of this function?
+2.7(b): What is the type of this function? (Answer by writing its
+type signature.)
 
 f True = Spring
 f False = Winter
 
-2.11(d): Given the definition of "g" below, is g a function? Why or why not?
+2.7(c): Given the definition of "g" below, is g a function? Why or why not?
 
 g :: Bool
 g = True
 
-2.11(e): Haskell will not accept this function definition; why not?
+2.7(d): Haskell will not accept this function definition; why not?
 
 not :: Bool -> Bool
 not False = True
 not True = _
 
-2.11(f): Haskell will also not accept this function definition; why not?
+2.7(e): Haskell will also not accept this function definition; why not?
 
 f False = Spring
 f True = March
 
-2.11(g): Haskell will also not accept this function definition; why not?
+2.7(f): Haskell will also not accept this function definition; why not?
 
 g Fall = True
 g September = True
+
+-}
+
+{- Exericse 2.8
+
+On a sheet of paper, for the function "monthToSeason" that you defined
+earlier, draw a diagram similar to the one given in Lesson2, part 1
+for function "opposite".
+
+Your diagram should represent:
+
+a) the type signature of monthToSeason, and
+b) the transformation of values from input type Month to output type Season.
 
 -}
