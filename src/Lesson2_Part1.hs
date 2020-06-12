@@ -35,6 +35,84 @@ opposite West = East
 
 -}
 
+{- Exercise 2.0
+
+Haskell's error messages have a (not entirely unfair) reputation for being daunting.
+Let's have a look at some examples to get used to them.
+
+These are all of the form
+ - Here's some broken code
+ - Let's look at the error message
+ - Can you explain why it is broken, and how the error message relates to that
+ - Please correct the code
+
+There is no need to do all of this exercise before doing the other exercises in this file.
+(But do ensure you eventually do all parts of this exercise.)
+-}
+
+{- 2.0(a): Consider the following broken definition.
+What is wrong with it?
+Uncomment it look at the error message - it is complaining that "Rotate" doesn't make sense as a <variable>.
+Now fix my code.
+-}
+{-
+Rotate :: Direction -> Direction
+Rotate North = East
+Rotate East = South
+Rotate South = West
+Rotate West = North
+-}
+{- 2.0(b): Let's do the same again
+This time the RHS "North" is not accepted as GHC thought we needed something of type "Direction -> Direction".
+Why did it think that?
+Can you fix the code?
+-}
+{-
+alwaysNorth :: Direction -> Direction
+alwaysNorth = North
+-}
+{- 2.0(c): Let's have a type with fewer constructors so our examples are not so long.
+However, I've messed it up - can you fix my mistakes?
+Notice that there can be multiple errors, and sometimes GHC gets so confused about one error, it doesn't understand enough to report the others.
+
+I suggest going step by step here to get a feel for the error messages, rather than trying to fix everything in one go.
+  - Firstly, GHC complains that it doesn't understand the '=' at the start of the line.
+    Whoops, indentation matters!
+  - Now, GHC complains about the "| Red" line, and nothing I try to do to fix it helps.
+    This is a prime candidate for "writing a smaller incorrect program, because that will be easier to debug", which is to say, let's comment out that line for now and get the rest of the definition working first.
+  - Can you fix it from here?
+-}
+{-
+Data colour
+= blue
+| Red
+-}
+{- 2.0(d): Error messages don't always point precicely to the problem
+This complains about the `->`, but the mistake has already happened before we got there.
+GHC is trying hard to understand what we wrote, and '->' is the point where it finally gave up.
+Why here? (Hint, '->' only makes sense in a _type_).
+Once you understand why, fix the code.
+-}
+{-
+alwaysBlue : Colour -> Colour
+alwaysBlue Blue = Blue
+alwaysBlue Red = Blue
+-}
+{- 2.0(e): Errors can be rather verbose.
+GHC has only one chance to give us useful feedback, so it errs on the side of including too much information, rather than too little.
+Unfortunately this means that sometimes an error message is much longer than necessary (because some of the information is only useful in rather specific contexts, but GHC doesn't know whether we want it this time or not).
+When one is just starting to learn a language this is compounded by the fact that sometimes (parts of) these errors only make sense when you know about specific features (in this case, polymorphism and what a "rigid type variable" is).
+Generally, the key skill here is to not worry about the bits you don't understand - just extract the useful bits of the message.
+Here that would be "Couldn't match expected type `colour' with actual type `Colour'", and the fact the error location is in the RHS of the first line.
+However, recall that the error message location does not always point to the text you need to edit - only the point where GHC realised there is undeniablably an error.
+Can you fix this code? (Hint: where does "colour" and "Colour" appear?)
+-}
+{-
+alwaysRed :: Colour -> colour
+alwaysRed Blue = Red
+alwaysRed Red = Red
+-}
+
 {- Exercise 2.1
 
 Given the following Seasons type that is similar (or maybe identical!)
