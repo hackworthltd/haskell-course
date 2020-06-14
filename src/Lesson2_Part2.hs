@@ -212,14 +212,6 @@ Provide the type signature for this function, as well.
 
 {- Exercise 2.19
 
-Define a function named "not" that takes one input of type Bool and
-whose output value is the opposite of the input value.
-
-Provide the type signature for this function, as well.
--}
-
-{- Exercise 2.20
-
 For this question, you don't need to write any Haskell code; just
 answer in English here in the comment.
 
