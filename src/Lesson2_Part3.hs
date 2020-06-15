@@ -36,6 +36,83 @@ data Month
   | December
   deriving (Show)
 
+{- Exercise 2.19
+
+Let's revisit the function you wrote in Exercise 2.6, "has31Days".
+When you originally wrote this function, you probably didn't know
+about wildcard patterns yet, so you had to write out all 12 cases by
+hand.
+
+Rewrite this function using wildcard patterns. Use the wildcard
+patterns to reduce it to the smallest number of equations you can.
+-}
+
+has31Days :: Month -> Bool
+has31Days _ = undefined
+
+{- Exercise 2.20
+
+Define a function named "and" that takes two inputs, both of type
+Bool, and outputs a value of type Bool. The output value should be
+True only if both inputs are True; otherwise, it should be false.
+
+Provide the type signature for this function, as well.
+-}
+
+{- Exercise 2.21
+
+Define a function named "or" that takes two inputs, both of type Bool,
+and outputs a value of type Bool. The output value should be True only
+if one or both of the input values are true; otherwise, it should be
+false.
+
+Provide the type signature for this function, as well.
+-}
+
+{- Exercise 2.22
+
+In Exercise 2.4, you defined a function called "monthToSeason" that,
+given a value of type Month as input, outputs a value of type Season
+that corresponds to that calendar month's season of the year.
+
+Suppose someone from Australia uses your function and complains that
+it's all wrong: July is a winter month! they say. And they're right --
+the season a given month falls into depends on which hemisphere you're
+in.
+
+To fix the problem, first define a type that represents the Earth's
+two hemispheres: Northern and Southern.
+
+Then, define a function called "globalMonthToSeason" that takes 2
+input values, one of type Month and the other of type Hemisphere
+(which you just defined), and outputs a value of type Season.
+
+Here we provide you with the incomplete definition for function
+"globalMonthToSeason", but you'll need to provide the rest.
+-}
+
+globalMonthToSeason _ _ = undefined
+
+{- Exercise 2.23
+
+For this question, you don't need to write any Haskell code; just
+answer in English here in the comment.
+
+What is the type of the function you just defined above,
+"globalMonthToSeason"?
+
+-}
+
+{- Exercise 2.24
+
+Consider the function that you defined in the Exercise 2.22,
+"globalMonthToSeason". You probably had to write quite a few equations
+to define it! Is there a way to reduce the number of equations
+required using pattern wildcards? If so, write the shorter definition;
+if not, explain why pattern wildcards can't help you here.
+
+-}
+
 {- NOTE: ****
 
 For these and all future exercises, if we ask you to define a
@@ -70,7 +147,7 @@ add the first input to the second. The + function's type signature is:
 
 -}
 
-{- Exercise 2.21
+{- Exercise 2.25
 
 Define a function named "subtract" that takes two inputs of type Integer,
 and outputs a value of type Integer whose value is produced by subtracting
@@ -82,7 +159,7 @@ that the "-" function has the type signature:
 (-) :: Integer -> Integer -> Integer
 -}
 
-{- Exercise 2.22
+{- Exercise 2.26
 
 Define a function named "multiply3" that takes three inputs of type Integer,
 and outputs a value of type Integer whose value is produced by multiplying
@@ -95,7 +172,7 @@ that the "*" function has the type signature:
 
 -}
 
-{- Exercise 2.23
+{- Exercise 2.27
 
 Define a function named "multiplyAndAdd" that takes three inputs of
 type Integer, and outputs a value of type Integer whose value is is produced
@@ -107,58 +184,7 @@ function.
 
 -}
 
-{- Exercise 2.24
-
-Function input variables can sometimes be useful for representing
-types other than Integer, as well. Let's explore that idea now.
-
-Though it may seem silly the first time you see it, sometimes it's
-useful to define a function that takes an input of some type (let's
-just call it type "a" for now, because it could be any type), and
-outputs a value of the same type "a", where the output value is
-*identical* to the input value. We call such a function an "identity"
-function.
-
-So, for example, let's say we want to define the identity function for
-values of type Month. We could write out all 12 explicit equations for
-this function, like this:
-
-identityMonth :: Month -> Month
-identityMonth January = January
-identityMonth February = February
-identityMonth March = March
-identityMonth April = April
-identityMonth May = May
-identityMonth June = June
-identityMonth July = July
-identityMonth August = August
-identityMonth September = September
-identityMonth October = October
-identityMonth November = November
-identityMonth December = December
-
-But it's tedious to write out all of those cases by hand.
-
-Use an input variable to write a much shorter definition of the
-"identityMonth" function. The type signature and an incomplete version
-of the function are provided for you. -}
-
-identityMonth :: Month -> Month
-identityMonth _ = undefined
-
-{- Exercise 2.25
-
-Define the identity function for values of type Season. Make the
-definition as short as possible. Choose your own name for this
-function and make sure it's something descriptive. -}
-
-{- Exercise 2.26
-
-Define the identity function for values of type Integer. Make the
-definition as short as possible. Choose your own name for this
-function and make sure it's something descriptive. -}
-
-{- Exercise 2.27
+{- Exercise 2.31
 
 Someone asks you to define a function called "strange" that works like
 this:
