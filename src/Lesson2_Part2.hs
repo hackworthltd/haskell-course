@@ -55,7 +55,7 @@ monthToInteger _ = undefined
 
 {- Exercise 2.10
 
-For this questions, you don't need to write any Haskell code; just
+For this question, you don't need to write any Haskell code; just
 answer in English here in the comment.
 
 Suppose someone asks you to define a function that takes as input an
@@ -158,8 +158,9 @@ has28Days December = False
 
 The following functions are defined for you, but they lack type
 signatures. For each one of these functions, provide the correct type
-signature. You can test your answers by reloading this file in GHCi:
-Haskell will print an error message if your type signatures are
+signature. You can test your answers by making changes and then
+re-running this file in in Repl.it (or, equivalently, re-loading it in
+GHCi): Haskell will print an error message if your type signatures are
 incorrect.
 -}
 

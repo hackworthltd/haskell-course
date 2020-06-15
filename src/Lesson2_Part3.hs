@@ -54,14 +54,14 @@ Integer contains many, many unique values, so when defining such a
 function, it's usually not possible to write out an explicit equation
 for every case. We'll need to make use of variables in most cases.
 
-To refresh your memory, recall that in Lesson2, we defined a function
-named "add" that takes two inputs of type Integer and outputs a value of
-type Integer whose value is produced by adding the value of the first
-input to the value of the second input. That function's type signature
-and definition were:
+To refresh your memory, recall that in Lesson2, part 2, we defined a
+function named "increment" that takes an inputs of type Integer and
+outputs a value of type Integer whose value is produced by adding one
+to the input value. That function's type signature and definition
+were:
 
-add :: Integer -> Integer -> Integer
-add x y = x + y
+increment :: Integer -> Integer
+increment x = x + 1
 
 And when defining it, we used Haskell's built-in function named "+" to
 add the first input to the second. The + function's type signature is:
