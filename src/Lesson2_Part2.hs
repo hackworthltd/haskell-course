@@ -331,8 +331,8 @@ about function parameters yet, so you had to write out all 12 cases by
 hand.
 
 Rewrite this function by combining explicit equations with function
-parameters. Use function parameters to reduce the number of equations
-needed to the least number you can.
+parameters. Use function parameters to reduce the definition to the
+fewest number of equations possible.
 
 Make sure you test your function!
 -}
