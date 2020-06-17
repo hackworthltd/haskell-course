@@ -11,11 +11,18 @@ lessons, or in previous exercises. When we do, we'll provide the
 definitions for those types so that you can use them in your
 solutions.
 
-Here's the IntegerList type that was defined in Lesson4. -}
+Included here is the IntegerList type that was defined in Lesson4, in
+addition to the Bool type we've been using since Lesson1. -}
 
-data IntegerList = EmptyList
-                 | Element Integer IntegerList
-                 deriving (Show)
+data IntegerList
+  = EmptyList
+  | Element Integer IntegerList
+  deriving (Show)
+
+data Bool
+  = False
+  | True
+  deriving (Show)
 
 {- Exercise 4.1
 
@@ -84,9 +91,10 @@ product _ = undefined
 
 {- Now we're going to define a new type which represents a list of boolean values.  -}
 
-data BoolList = EmptyBoolList
-              | BoolElement Bool BoolList
-              deriving (Show)
+data BoolList
+  = EmptyBoolList
+  | BoolElement Bool BoolList
+  deriving (Show)
 
 {- Exercise 4.4
 
@@ -109,12 +117,12 @@ lengthBool _ = undefined
 
 and :: Bool -> Bool -> Bool
 and True True = True
-and _    _    = False
+and _ _ = False
 
 or :: Bool -> Bool -> Bool
-or True _    = True
-or _    True = True
-or _    _    = False
+or True _ = True
+or _ True = True
+or _ _ = False
 
 {- Exercise 4.6
 
@@ -124,7 +132,6 @@ BoolList are True, and returns False otherwise.
 
 allTrue :: BoolList -> Bool
 allTrue _ = undefined
-
 
 {- Exercise 4.7
 
@@ -154,9 +161,10 @@ How could you fix it?
 
 {- Here's the IntegerTree type you saw in Lesson 4 -}
 
-data IntegerTree = Leaf Integer
-                 | Branch IntegerTree IntegerTree
-                 deriving (Show)
+data IntegerTree
+  = Leaf Integer
+  | Branch IntegerTree IntegerTree
+  deriving (Show)
 
 {- Exercise 4.9
 
@@ -210,7 +218,6 @@ The height of a leaf is 0.
 
 height :: IntegerTree -> Integer
 height _ = undefined
-
 
 {- Exercise 4.12
 
