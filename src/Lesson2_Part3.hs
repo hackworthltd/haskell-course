@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -Wno-missing-signatures -Wno-incomplete-patterns -Wno-overlapping-patterns -Wno-unused-matches #-}
+
 module Lesson2_Part3 where
 
 import Lib.Lesson2_Part3
