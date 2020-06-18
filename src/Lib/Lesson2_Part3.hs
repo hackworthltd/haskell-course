@@ -1,3 +1,4 @@
-module Lib.Lesson2_Part3 ((*), (+), Integer, Show, undefined) where
+module Lib.Lesson2_Part3 ((*), (+), (-), Integer, Natural, Show, undefined) where
 
-import Prelude ((*), (+), Integer, Show, undefined)
+import Numeric.Natural (Natural)
+import Prelude ((*), (+), (-), Integer, Show, undefined)
