@@ -186,6 +186,7 @@ integerInTree _ = undefined
 
 Complete the following function, which adds two IntegerLists together by summing their elements together.
 You can assume that the two lists are the same length.
+That is, you need to consider the handle the case where the lists are different lengths (so the function won't crash), but we don't mind what value is returned in that case.
 Hint: use simultaneous recursion.
 
 Examples:
