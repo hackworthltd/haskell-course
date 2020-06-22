@@ -23,6 +23,21 @@ data Direction
   | West
   deriving (Show)
 
+data Month
+  = January
+  | February
+  | March
+  | April
+  | May
+  | June
+  | July
+  | August
+  | September
+  | October
+  | November
+  | December
+  deriving (Show)
+
 data Rotation
   = Clockwise
   | CounterClockwise
