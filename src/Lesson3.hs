@@ -247,7 +247,11 @@ to define the function's type signature as well as finishing its
 equation!
 
 After you've defined function f, don't forget to Run this file in
-GHCi, switch back to it using the :load Lesson3.hs command, and test
+GHCi, switch back to it using the
+
+:load Lesson3
+
+command, and test
 your function by writing some expressions with it in GHCi! -}
 
 f n = undefined
