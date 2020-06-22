@@ -210,10 +210,12 @@ very similar definitions. Are they equivalent? Explain.
 
 data A
   = MakeA Integer Direction
+  deriving (Show)
 
 
 data B
   = MakeB Direction Integer
+  deriving (Show)
 
 
 {- Exercise 3.5
