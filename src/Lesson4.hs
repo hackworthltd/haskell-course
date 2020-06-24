@@ -72,7 +72,7 @@ Complete the implementation. When you've completed it, test out your function by
 calling it with the test arguments given above. -}
 
 head :: Integer -> ListOfInteger -> Integer
-head _ = undefined
+head _ _ = undefined
 
 {- Exercise 4.3
 
@@ -185,7 +185,7 @@ integerInTree 4 (Branch (Leaf 2) (Branch (Leaf 1) (Leaf 3))) == False
 -}
 
 integerInTree :: Integer -> TreeOfInteger -> Bool
-integerInTree _ = undefined
+integerInTree _ _ = undefined
 
 {- Exercise 4.10
 
