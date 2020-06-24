@@ -55,7 +55,7 @@ data E
   = MakeE E
 
 b) Using type ListOfInteger and its value constructors, write a
-Haskell expression that builds a ListOfInteger list for each of the
+Haskell expression that constructs a ListOfInteger for each of the
 following lists:
 
 - the empty list
