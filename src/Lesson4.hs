@@ -35,18 +35,23 @@ For each of the following types, write down:
 
 Write your answer at the bottom of this comment.
 
-data A = MakeA Integer
+data A
+  = MakeA Integer
 
-data B = MakeB Integer
-       | StopB
+data B
+  = MakeB Integer
+  | StopB
 
-data C = MakeC C
-       | StopC
+data C
+  = MakeC C
+  | StopC
 
-data D = MakeD Integer D Integer
-       | EmptyD
+data D
+  = MakeD Integer D Integer
+  | EmptyD
 
-data E = MakeE E
+data E
+  = MakeE E
 
 -}
 
