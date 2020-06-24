@@ -246,40 +246,6 @@ data TreeOfInteger
   | Branch TreeOfInteger TreeOfInteger
   deriving (Show)
 
-{- Exercise 4.9
-
-Here's the incomplete definition a function called "integerInTree",
-which calculates whether an TreeOfInteger contains a specific Integer
-value.
-
-The first argument is a value of type Integer, and the second argument
-is a TreeOfInteger. If the value of the first argument is found
-anywhere in the tree, the function should output True. Otherwise it
-should output False.
-
-To help you write this function, here are a few expressions and the
-values they should evaluate to once the function is working:
-
-integerInTree 1 (Leaf 2)
-
-should evaluate to False.
-
-integerInTree 1 (Branch (Leaf 2) (Branch (Leaf 1) (Leaf 3)))
-
-should evaluate to True.
-
-integerInTree 4 (Branch (Leaf 2) (Branch (Leaf 1) (Leaf 3)))
-
-should evaluate to False.
-
-Complete the defintion of function integerInTree. The type signature
-is provided for you.
-
-Test your function using the expressions given above. -}
-
-integerInTree :: Integer -> TreeOfInteger -> Bool
-integerInTree _ _ = undefined
-
 {- Exercise 4.11
 
 Complete the following function to calculate the height of an TreeOfInteger. The
