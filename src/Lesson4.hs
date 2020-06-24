@@ -280,35 +280,6 @@ Test your function using the expressions given above. -}
 integerInTree :: Integer -> TreeOfInteger -> Bool
 integerInTree _ _ = undefined
 
-{- Exercise 4.10
-
-Consider the unfinished function below, which combines two ListOfIntegers by adding their elements together.
-
-a) How many equations will this function have, assuming we don't use any wildcard patterns?
-
-b) Expand the function by writing out each equation, leaving holes for the right hand sides.
-
-c) Assume that we will only call this function with ListOfIntegers of the same
-length. Which equations will be used and which won't be used? For the equations
-that won't be used, fill in their right hand sides with EmptyList.
-
-d) Fill in the right hand sides of the remaining equations so that the function is fully defined. Test it on the following cases:
-
-addLists EmptyList EmptyList == EmptyList
-addLists (Element 1 EmptyList) (Element 2 EmptyList) == Element 3 EmptyList
-addLists (Element 1 (Element 2 (Element 3 EmptyList))) (Element 2 (Element 3 (Element 4 EmptyList))) == (Element 3 (Element 5 (Element 7 EmptyList)))
-
-e) The function we have written outputs an empty list if its arguments have
-different lengths. This is an arbitrary design choice: we could have made the
-function do something else in this case instead. Can you think of a more useful
-thing for the function to output if the lists have different lengths? Try to
-write a new function addLists2 which implements the behaviour.
-
--}
-
-addLists :: ListOfInteger -> ListOfInteger -> ListOfInteger
-addLists _ _ = undefined
-
 {- Exercise 4.11
 
 Complete the following function to calculate the height of an TreeOfInteger. The
