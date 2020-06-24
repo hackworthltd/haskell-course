@@ -92,20 +92,27 @@ head _ _ = undefined
 
 {- Exercise 4.3
 
-Here's a function named "product" which calculates the product of an ListOfInteger
-(the result when you multiply all the numbers together). If given an empty list,
-product should output 1.
+Here's a function named "product" which calculates the product of an
+ListOfInteger by multiplying all of the numbers in the list together.
+If the value of its argument is an empty list, product should output
+1.
 
-Here is how product should behave:
+To help you write this function, here are a few expressions and the
+values they should evaluate to once the function is working:
 
-product EmptyList == 1
-product (Element 2 (Element 4 (Element 6))) == 48
+product EmptyList
 
-a) Complete the implementation.
+should evaluate to 1.
 
-b) Use "product" to calculate the product of this list: 32,64,128
+product (Element 2 (Element 4 (Element 6 EmptyList)))
 
--}
+should evaluate to 48.
+
+Complete the definition of the function. The type signature is
+provided for you.
+
+Then use the function to calculate the product of a list containing
+the values 32, 64, and 128. -}
 
 product :: ListOfInteger -> Integer
 product _ = undefined
