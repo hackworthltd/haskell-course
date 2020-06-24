@@ -225,22 +225,19 @@ should evaluate to False.
 anyTrue :: ListOfBool -> Bool
 anyTrue _ = undefined
 
-{-
+{- Exercise 4.8
 
-Here is the type signature of a function called "lastInteger", which outputs the
-last element of an ListOfInteger.
+Here's the incomplete definition of a function named "lastInteger",
+which should output the last element of a ListOfInteger. The type
+signature is provided for you. (Note that its output type is Integer.)
+
+Try to complete the definition of lastInteger. What problem do you
+encounter? How might you fix it?
 
 -}
 
 lastInteger :: ListOfInteger -> Integer
 lastInteger _ = undefined
-
-{- Exercise 4.8
-
-Try to complete the definition of lastInteger. What problem do you encounter?
-How could you fix it?
-
--}
 
 {- Here's the TreeOfInteger type you saw in Lesson 4 -}
 
