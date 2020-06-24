@@ -126,15 +126,21 @@ data ListOfBool
 
 {- Exercise 4.4
 
+For this exercise, you don't need to write any Haskell.
+
 a) What is the base case of ListOfBool?
+
 b) What is the inductive case of ListOfBool?
 
 -}
 
 {- Exercise 4.5
 
-Complete the following function, which calculates the length of a ListOfBool.
--}
+Complete the definition of the following function named "lengthBool",
+which calculates the length of a ListOfBool. The type signature is
+provided for you.
+
+Test your function by evaluating a few expressions! -}
 
 lengthBool :: ListOfBool -> Integer
 lengthBool _ = undefined
