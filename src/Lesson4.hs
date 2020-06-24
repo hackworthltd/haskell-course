@@ -145,9 +145,8 @@ Test your function by evaluating a few expressions! -}
 lengthBool :: ListOfBool -> Integer
 lengthBool _ = undefined
 
-{-
-  Here are some functions you defined in Lesson 2, Part 2. We'll use them shortly.
--}
+{- Here are some functions you defined in Lesson 2, Part 2. We'll use
+ them shortly. -}
 
 and :: Bool -> Bool -> Bool
 and True True = True
@@ -160,8 +159,25 @@ or _ _ = False
 
 {- Exercise 4.6
 
-Complete the following function, which outputs True if all the elements of a
-ListOfBool are True, and outputs False otherwise.
+Complete the definition of the following function named "allTrue",
+which outputs True if all the elements of a ListOfBool are True, and
+outputs False otherwise. The type signature is provided for you.
+
+To help you write this function, here are a few expressions and the
+values they should evaluate to once the function is working:
+
+allTrue (BoolElement True (BoolElement True EmptyListOfBool))
+
+should evaluate to True.
+
+allTrue (BoolElement False (BoolElement True EmptyListOfBool))
+
+should evaluate to False.
+
+allTrue EmptyListOfBool
+
+should evaluate to False.
+
 -}
 
 allTrue :: ListOfBool -> Bool
