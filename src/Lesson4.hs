@@ -28,7 +28,7 @@ data Bool
 
 For this exercise, you don't need to write any Haskell.
 
-For each of the following type definitions, answer the following
+a) For each of the following type definitions, answer the following
 questions. Write your answers below each definition:
 - is the type recursive?
 - if it is:
@@ -53,6 +53,19 @@ data D
 
 data E
   = MakeE E
+
+b) Using type ListOfInteger and its value constructors, write a
+Haskell expression that builds a ListOfInteger list for each of the
+following lists:
+
+- the empty list
+
+- A list with just the value 10 in it
+
+- A list with the values 1, 3, 2, 4 in it.
+
+Remember that you can test your expressions by running this file in
+Repl.it and then writing the expressions in the GHCi window.
 
 -}
 
