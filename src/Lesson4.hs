@@ -103,7 +103,28 @@ Test your function by evaluating the expressions given above. -}
 head :: Integer -> ListOfInteger -> Integer
 head _ _ = undefined
 
+
 {- Exercise 4.3
+
+For this function, you don't need to write any Haskell.
+
+Take a look at the function you just defined in Exercise 4.2. We know
+from the Lesson4 that type ListOfInteger is a recursive type; is
+function head a recursive *function*? Why or why not?
+
+
+-}
+
+{- ****
+
+Now stop here and continue on with Lesson4, starting where you left
+off at the section named "More recursive functions."
+
+**** -}
+
+
+
+{- Exercise 4.4
 
 Here's a function named "product" which calculates the product of an
 ListOfInteger by multiplying all of the numbers in the list together.
@@ -137,7 +158,7 @@ data ListOfBool
   | BoolElement Bool ListOfBool
   deriving (Show)
 
-{- Exercise 4.4
+{- Exercise 4.5
 
 For this exercise, you don't need to write any Haskell.
 
@@ -147,7 +168,7 @@ b) What is the inductive case of ListOfBool?
 
 -}
 
-{- Exercise 4.5
+{- Exercise 4.6
 
 Complete the definition of the following function named "lengthBool",
 which calculates the length of a ListOfBool. The type signature is
@@ -170,7 +191,7 @@ or True _ = True
 or _ True = True
 or _ _ = False
 
-{- Exercise 4.6
+{- Exercise 4.7
 
 Complete the definition of the following function named "allTrue",
 which outputs True if all the elements of a ListOfBool are True, and
@@ -204,7 +225,7 @@ should evaluate to False.
 allTrue :: ListOfBool -> Bool
 allTrue _ = undefined
 
-{- Exercise 4.7
+{- Exercise 4.8
 
 Complete the definition of the following function named "anyTrue",
 which outputs True if ANY of the elements of a ListOfBool are True,
@@ -238,7 +259,7 @@ should evaluate to False.
 anyTrue :: ListOfBool -> Bool
 anyTrue _ = undefined
 
-{- Exercise 4.8
+{- Exercise 4.9
 
 Here's the incomplete definition of a function named "lastInteger",
 which should output the last element of a ListOfInteger. The type
@@ -258,7 +279,7 @@ The next two exercises are rather difficult. Give them a try and see
 how you do, but don't be too concerned if you can't figure them out.
 Feel free to ask the instructor for help, if you need it. -}
 
-{- Exercise 4.9
+{- Exercise 4.10
 
 Define a function named "appendList" which takes as input two lists of
 type ListOfInteger, and appends the second list to the end of the
@@ -322,7 +343,7 @@ data TreeOfInteger
   | Branch TreeOfInteger TreeOfInteger
   deriving (Show)
 
-{- Exercise 4.10
+{- Exercise 4.11
 
 Complete the following function to flatten an TreeOfInteger into an ListOfInteger.
 The first integer in the list should be the leftmost integer in the tree, and
@@ -342,7 +363,7 @@ should flatten to the list 1,3,2:
 
 Element 1 (Element 3 (Element 2 EmptyList))
 
-Hint: use the function you defined in Exercise 4.9, "appendList", to
+Hint: use the function you defined in Exercise 4.10, "appendList", to
 write this function. This function is actually quite easy once you
 figure how how to use appendList!
 
