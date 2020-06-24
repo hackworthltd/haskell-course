@@ -104,27 +104,16 @@ head :: Integer -> ListOfInteger -> Integer
 head _ _ = undefined
 
 
-{- Exercise 4.3
-
-For this function, you don't need to write any Haskell.
-
-Take a look at the function you just defined in Exercise 4.2. We know
-from the Lesson4 that type ListOfInteger is a recursive type; is
-function head a recursive *function*? Why or why not?
-
-
--}
-
 {- ****
 
 Now stop here and continue on with Lesson4, starting where you left
-off at the section named "More recursive functions."
+off at the section named "Recursive functions."
 
 **** -}
 
 
 
-{- Exercise 4.4
+{- Exercise 4.3
 
 Here's a function named "product" which calculates the product of an
 ListOfInteger by multiplying all of the numbers in the list together.
@@ -158,13 +147,24 @@ data ListOfBool
   | BoolElement Bool ListOfBool
   deriving (Show)
 
-{- Exercise 4.5
+{- Exercise 4.4
 
 For this exercise, you don't need to write any Haskell.
 
 a) What is the base case of ListOfBool?
 
 b) What is the inductive case of ListOfBool?
+
+-}
+
+{- Exercise 4.5
+
+For this function, you don't need to write any Haskell.
+
+Take a look at the function you just defined in Exercise 4.2. We know
+from the Lesson4 that type ListOfInteger is a recursive type; is
+function head a recursive *function*? Why or why not?
+
 
 -}
 
