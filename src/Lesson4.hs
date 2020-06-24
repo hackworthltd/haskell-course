@@ -59,18 +59,33 @@ data E
 {- Exercise 4.2
 
 Here's a function named "head" which outputs the first element of an
-ListOfInteger. Its first argument is the "default value", which should be output
-if the list is empty. Its second argument is the list itself.
+ListOfInteger. Its first argument is the "default value", which should
+be output if the list is empty. Its second argument is the list
+itself.
 
-Here is how head should behave:
+To help you write this function, here are a few expressions and the
+values they should evaluate to once the function is working:
 
-head 7 EmptyList == 7
-head 7 (Element 1 EmptyList) == 1
-head 5 (Element 1 (Element 3 EmptyList)) == 1
-head 5 EmptyList == 5
+head 7 EmptyList
 
-Complete the implementation. When you've completed it, test out your function by
-calling it with the test arguments given above. -}
+should evaluate to 7.
+
+head 7 (Element 1 EmptyList)
+
+should evaluate to 1.
+
+head 5 (Element 0 (Element 3 EmptyList))
+
+should evaluate to 0.
+
+head 5 EmptyList
+
+should evalute to 5.
+
+Complete the definition of the function. The type signature is
+provided for you.
+
+Test your function by evaluating the expressions given above. -}
 
 head :: Integer -> ListOfInteger -> Integer
 head _ _ = undefined
