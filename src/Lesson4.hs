@@ -96,24 +96,24 @@ product _ = undefined
 
 {- Now we're going to define a new type which represents a list of boolean values.  -}
 
-data BoolList
-  = EmptyBoolList
-  | BoolElement Bool BoolList
+data ListOfBool
+  = EmptyListOfBool
+  | BoolElement Bool ListOfBool
   deriving (Show)
 
 {- Exercise 4.4
 
-a) What is the base case of BoolList?
-b) What is the inductive case of BoolList?
+a) What is the base case of ListOfBool?
+b) What is the inductive case of ListOfBool?
 
 -}
 
 {- Exercise 4.5
 
-Complete the following function, which calculates the length of a BoolList.
+Complete the following function, which calculates the length of a ListOfBool.
 -}
 
-lengthBool :: BoolList -> Integer
+lengthBool :: ListOfBool -> Integer
 lengthBool _ = undefined
 
 {-
@@ -132,19 +132,19 @@ or _ _ = False
 {- Exercise 4.6
 
 Complete the following function, which returns True if all the elements of a
-BoolList are True, and returns False otherwise.
+ListOfBool are True, and returns False otherwise.
 -}
 
-allTrue :: BoolList -> Bool
+allTrue :: ListOfBool -> Bool
 allTrue _ = undefined
 
 {- Exercise 4.7
 
 Complete the following function, which returns True if ANY of the elements of a
-BoolList are True, and returns False otherwise.
+ListOfBool are True, and returns False otherwise.
 -}
 
-anyTrue :: BoolList -> Bool
+anyTrue :: ListOfBool -> Bool
 anyTrue _ = undefined
 
 {-
