@@ -11,12 +11,12 @@ lessons, or in previous exercises. When we do, we'll provide the
 definitions for those types so that you can use them in your
 solutions.
 
-Included here is the IntegerList type that was defined in Lesson4, in
+Included here is the ListOfInteger type that was defined in Lesson4, in
 addition to the Bool type we've been using since Lesson1. -}
 
-data IntegerList
+data ListOfInteger
   = EmptyList
-  | Element Integer IntegerList
+  | Element Integer ListOfInteger
   deriving (Show)
 
 data Bool
@@ -53,7 +53,7 @@ data E = MakeE E
 {- Exercise 4.2
 
 Here's a function named "head" which returns the first element of an
-IntegerList. Its first argument is the "default value", which should be returned
+ListOfInteger. Its first argument is the "default value", which should be returned
 if the list is empty. Its second argument is the list itself.
 
 Here is how head should behave:
@@ -66,12 +66,12 @@ head 5 EmptyList == 5
 Complete the implementation. When you've completed it, test out your function by
 calling it with the test arguments given above. -}
 
-head :: Integer -> IntegerList -> Integer
+head :: Integer -> ListOfInteger -> Integer
 head _ = undefined
 
 {- Exercise 4.3
 
-Here's a function named "product" which calculates the product of an IntegerList
+Here's a function named "product" which calculates the product of an ListOfInteger
 (the result when you multiply all the numbers together). If given an empty list,
 product should return 1.
 
@@ -86,7 +86,7 @@ b) Use "product" to calculate the product of this list: 32,64,128
 
 -}
 
-product :: IntegerList -> Integer
+product :: ListOfInteger -> Integer
 product _ = undefined
 
 {- Now we're going to define a new type which represents a list of boolean values.  -}
@@ -145,11 +145,11 @@ anyTrue _ = undefined
 {-
 
 Here is the type signature of a function called "lastInteger", which returns the
-last element of an IntegerList.
+last element of an ListOfInteger.
 
 -}
 
-lastInteger :: IntegerList -> Integer
+lastInteger :: ListOfInteger -> Integer
 lastInteger _ = undefined
 
 {- Exercise 4.8
@@ -159,16 +159,16 @@ How could you fix it?
 
 -}
 
-{- Here's the IntegerTree type you saw in Lesson 4 -}
+{- Here's the TreeOfInteger type you saw in Lesson 4 -}
 
-data IntegerTree
+data TreeOfInteger
   = Leaf Integer
-  | Branch IntegerTree IntegerTree
+  | Branch TreeOfInteger TreeOfInteger
   deriving (Show)
 
 {- Exercise 4.9
 
-Complete the following function, which calculates whether an IntegerTree contains a specific Integer.
+Complete the following function, which calculates whether an TreeOfInteger contains a specific Integer.
 If the Integer is somewhere in the tree, the function should return True.
 Otherwise it should return False.
 
@@ -179,18 +179,18 @@ integerInTree 1 (Branch (Leaf 2) (Branch (Leaf 1) (Leaf 3))) == True
 integerInTree 4 (Branch (Leaf 2) (Branch (Leaf 1) (Leaf 3))) == False
 -}
 
-integerInTree :: Integer -> IntegerTree -> Bool
+integerInTree :: Integer -> TreeOfInteger -> Bool
 integerInTree _ = undefined
 
 {- Exercise 4.10
 
-Consider the unfinished function below, which combines two IntegerLists by adding their elements together.
+Consider the unfinished function below, which combines two ListOfIntegers by adding their elements together.
 
 a) How many equations will this function have, assuming we don't use any wildcard patterns?
 
 b) Expand the function by writing out each equation, leaving holes for the right hand sides.
 
-c) Assume that we will only call this function with IntegerLists of the same
+c) Assume that we will only call this function with ListOfIntegers of the same
 length. Which equations will be used and which won't be used? For the equations
 that won't be used, fill in their right hand sides with EmptyList.
 
@@ -208,12 +208,12 @@ write a new function addLists2 which implements the behaviour.
 
 -}
 
-addLists :: IntegerList -> IntegerList -> IntegerList
+addLists :: ListOfInteger -> ListOfInteger -> ListOfInteger
 addLists _ _ = undefined
 
 {- Exercise 4.11
 
-Complete the following function to calculate the height of an IntegerTree. The
+Complete the following function to calculate the height of an TreeOfInteger. The
 height of a tree is equal to the maximum amount of nesting it contains.  For
 example, the tree
 
@@ -231,12 +231,12 @@ The height of a leaf is 0.
 
 -}
 
-height :: IntegerTree -> Integer
+height :: TreeOfInteger -> Integer
 height _ = undefined
 
 {- Exercise 4.12
 
-Complete the following function to flatten an IntegerTree into an IntegerList.
+Complete the following function to flatten an TreeOfInteger into an ListOfInteger.
 The first integer in the list should be the leftmost integer in the tree, and
 the last integer in the list should be the rightmost integer in the tree.
 
@@ -256,5 +256,5 @@ Element 1 (Element 3 (Element 2 EmptyList))
 
 -}
 
-flatten :: IntegerTree -> IntegerList
+flatten :: TreeOfInteger -> ListOfInteger
 flatten _ = undefined
