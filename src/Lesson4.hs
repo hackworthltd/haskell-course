@@ -246,29 +246,6 @@ data TreeOfInteger
   | Branch TreeOfInteger TreeOfInteger
   deriving (Show)
 
-{- Exercise 4.11
-
-Complete the following function to calculate the height of an TreeOfInteger. The
-height of a tree is equal to the maximum amount of nesting it contains.  For
-example, the tree
-
-Branch (Branch (Leaf 1) (Leaf 3)) (Leaf 2)
-
-has a height of 2, as indicated by this drawing:
-
-            /\        |- 2
-          /    \      |
-        / \      2    |- 1
-      /     \         |
-     1       3        |- 0
-
-The height of a leaf is 0.
-
--}
-
-height :: TreeOfInteger -> Integer
-height _ = undefined
-
 {- Exercise 4.12
 
 Complete the following function to flatten an TreeOfInteger into an ListOfInteger.
