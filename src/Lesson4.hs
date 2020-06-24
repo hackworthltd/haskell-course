@@ -57,8 +57,8 @@ data E
 
 {- Exercise 4.2
 
-Here's a function named "head" which returns the first element of an
-ListOfInteger. Its first argument is the "default value", which should be returned
+Here's a function named "head" which outputs the first element of an
+ListOfInteger. Its first argument is the "default value", which should be output
 if the list is empty. Its second argument is the list itself.
 
 Here is how head should behave:
@@ -78,7 +78,7 @@ head _ _ = undefined
 
 Here's a function named "product" which calculates the product of an ListOfInteger
 (the result when you multiply all the numbers together). If given an empty list,
-product should return 1.
+product should output 1.
 
 Here is how product should behave:
 
@@ -131,8 +131,8 @@ or _ _ = False
 
 {- Exercise 4.6
 
-Complete the following function, which returns True if all the elements of a
-ListOfBool are True, and returns False otherwise.
+Complete the following function, which outputs True if all the elements of a
+ListOfBool are True, and outputs False otherwise.
 -}
 
 allTrue :: ListOfBool -> Bool
@@ -140,8 +140,8 @@ allTrue _ = undefined
 
 {- Exercise 4.7
 
-Complete the following function, which returns True if ANY of the elements of a
-ListOfBool are True, and returns False otherwise.
+Complete the following function, which outputs True if ANY of the elements of a
+ListOfBool are True, and outputs False otherwise.
 -}
 
 anyTrue :: ListOfBool -> Bool
@@ -149,7 +149,7 @@ anyTrue _ = undefined
 
 {-
 
-Here is the type signature of a function called "lastInteger", which returns the
+Here is the type signature of a function called "lastInteger", which outputs the
 last element of an ListOfInteger.
 
 -}
@@ -174,8 +174,8 @@ data TreeOfInteger
 {- Exercise 4.9
 
 Complete the following function, which calculates whether an TreeOfInteger contains a specific Integer.
-If the Integer is somewhere in the tree, the function should return True.
-Otherwise it should return False.
+If the Integer is somewhere in the tree, the function should output True.
+Otherwise it should output False.
 
 Here are some examples:
 
@@ -205,10 +205,10 @@ addLists EmptyList EmptyList == EmptyList
 addLists (Element 1 EmptyList) (Element 2 EmptyList) == Element 3 EmptyList
 addLists (Element 1 (Element 2 (Element 3 EmptyList))) (Element 2 (Element 3 (Element 4 EmptyList))) == (Element 3 (Element 5 (Element 7 EmptyList)))
 
-e) The function we have written returns an empty list if its arguments have
+e) The function we have written outputs an empty list if its arguments have
 different lengths. This is an arbitrary design choice: we could have made the
 function do something else in this case instead. Can you think of a more useful
-thing for the function to return if the lists have different lengths? Try to
+thing for the function to output if the lists have different lengths? Try to
 write a new function addLists2 which implements the behaviour.
 
 -}
