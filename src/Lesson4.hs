@@ -11,8 +11,8 @@ lessons, or in previous exercises. When we do, we'll provide the
 definitions for those types so that you can use them in your
 solutions.
 
-Included here is the ListOfInteger type that was defined in Lesson4, in
-addition to the Bool type we've been using since Lesson1. -}
+Included here is the ListOfInteger type that was defined in Lesson4,
+in addition to the Bool type we've been using since Lesson1. -}
 
 data ListOfInteger
   = EmptyList
@@ -26,14 +26,15 @@ data Bool
 
 {- Exercise 4.1
 
-For each of the following types, write down:
+For this exercise, you don't need to write any Haskell.
+
+For each of the following type definitions, answer the following
+questions. Write your answers below each definition:
 - is the type recursive?
 - if it is:
   - which value constructor corresponds to the inductive case?
   - which value constructor corresponds to the base case (if there is one)?
   - write down a value of this type
-
-Write your answer at the bottom of this comment.
 
 data A
   = MakeA Integer
