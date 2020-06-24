@@ -239,6 +239,69 @@ encounter? How might you fix it?
 lastInteger :: ListOfInteger -> Integer
 lastInteger _ = undefined
 
+{- Challenge exercises.
+
+The next two exercises are rather difficult. Give them a try and see
+how you do, but don't be too concerned if you can't figure them out.
+Feel free to ask the instructor for help, if you need it. -}
+
+{- Exercise 4.9
+
+Define a function named "appendList" which takes as input two lists of
+type ListOfInteger, and appends the second list to the end of the
+first.
+
+For example, if you have a list of integers containing 4, 5, and 6;
+and you append it to a list of integers containing 1, 2, and 3; you
+will get a new list containing integers 1, 2, 3, 4, 5, and 6.
+
+To help you write this function, here are a few expressions and the
+values they should evaluate to once the function is working:
+
+appendList EmptyList EmptyList
+
+should evaluate to EmptyList
+
+appendList EmptyList (Element 1 EmptyList)
+
+should evaluate to Element 1 EmptyList
+
+appendList (Element 1 EmptyList) EmptyList
+
+should evaluate to Element 1 EmptyList
+
+appendList (Element 1 EmptyList) (Element 2 EmptyList)
+
+should evaluate to Element 1 (Element 2 EmptyList)
+
+appendList (Element 2 EmptyList) (Element 1 EmptyList)
+
+should evaluate to Element 2 (Element 1 EmptyList)
+
+appendList (Element 1 (Element 2 (Element 3 EmptyList))) (Element 2 EmptyList)
+
+should evaluate to Element 1 (Element 2 (Element 3 (Element 2 EmptyList)))
+
+appendList (Element 1 (Element 2 (Element 3 EmptyList))) (Element 4 (Element 5 EmptyList))
+
+should evaluate to Element 1 (Element 2 (Element 3 (Element 4 (Element 5 EmptyList))))
+
+appendList (Element 4 (Element 5 EmptyList)) (Element 1 (Element 2 (Element 3 EmptyList)))
+
+should evaluate to Element 4 (Element 5 (Element 1 (Element 2 (Element 3 EmptyList))))
+
+The function type signature is provided for you.
+
+Hint: Start by defining the equation for the case when the first
+argument is the empty list. Then define the equation for the case
+where the second argument is the empty list. Then write the remaining
+equation where neither list is empty.
+
+-}
+
+appendList :: ListOfInteger -> ListOfInteger -> ListOfInteger
+appendList _ _ = undefined
+
 {- Here's the TreeOfInteger type you saw in Lesson 4. -}
 
 data TreeOfInteger
@@ -246,7 +309,7 @@ data TreeOfInteger
   | Branch TreeOfInteger TreeOfInteger
   deriving (Show)
 
-{- Exercise 4.12
+{- Exercise 4.10
 
 Complete the following function to flatten an TreeOfInteger into an ListOfInteger.
 The first integer in the list should be the leftmost integer in the tree, and
@@ -265,6 +328,10 @@ Branch (Branch (Leaf 1) (Leaf 3)) (Leaf 2)
 should flatten to the list 1,3,2:
 
 Element 1 (Element 3 (Element 2 EmptyList))
+
+Hint: use the function you defined in Exercise 4.9, "appendList", to
+write this function. This function is actually quite easy once you
+figure how how to use appendList!
 
 -}
 
