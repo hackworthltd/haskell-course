@@ -174,6 +174,14 @@ allTrue (BoolElement False (BoolElement True EmptyListOfBool))
 
 should evaluate to False.
 
+allTrue (BoolElement True EmptyListOfBool)
+
+should evaluate to True.
+
+allTrue (BoolElement False (BoolElement False EmptyListOfBool))
+
+should evaluate to False.
+
 allTrue EmptyListOfBool
 
 should evaluate to False.
@@ -185,8 +193,33 @@ allTrue _ = undefined
 
 {- Exercise 4.7
 
-Complete the following function, which outputs True if ANY of the elements of a
-ListOfBool are True, and outputs False otherwise.
+Complete the definition of the following function named "anyTrue",
+which outputs True if ANY of the elements of a ListOfBool are True,
+and outputs False otherwise. The type signature is provided for you.
+
+To help you write this function, here are a few expressions and the
+values they should evaluate to once the function is working:
+
+anyTrue (BoolElement True (BoolElement True EmptyListOfBool))
+
+should evaluate to True.
+
+anyTrue (BoolElement False (BoolElement True EmptyListOfBool))
+
+should evaluate to True.
+
+anyTrue (BoolElement True EmptyListOfBool)
+
+should evaluate to True.
+
+anyTrue (BoolElement False (BoolElement False EmptyListOfBool))
+
+should evaluate to False.
+
+anyTrue EmptyListOfBool
+
+should evaluate to False.
+
 -}
 
 anyTrue :: ListOfBool -> Bool
