@@ -202,23 +202,23 @@ values they should evaluate to once the function is working:
 
 allTrue (BoolElement True (BoolElement True EmptyListOfBool))
 
-should evaluate to True.
+=> should evaluate to True.
 
 allTrue (BoolElement False (BoolElement True EmptyListOfBool))
 
-should evaluate to False.
+=> should evaluate to False.
 
 allTrue (BoolElement True EmptyListOfBool)
 
-should evaluate to True.
+=> should evaluate to True.
 
 allTrue (BoolElement False (BoolElement False EmptyListOfBool))
 
-should evaluate to False.
+=> should evaluate to False.
 
 allTrue EmptyListOfBool
 
-should evaluate to False.
+=> should evaluate to False.
 
 -}
 
@@ -236,23 +236,23 @@ values they should evaluate to once the function is working:
 
 anyTrue (BoolElement True (BoolElement True EmptyListOfBool))
 
-should evaluate to True.
+=> should evaluate to True.
 
 anyTrue (BoolElement False (BoolElement True EmptyListOfBool))
 
-should evaluate to True.
+=> should evaluate to True.
 
 anyTrue (BoolElement True EmptyListOfBool)
 
-should evaluate to True.
+=> should evaluate to True.
 
 anyTrue (BoolElement False (BoolElement False EmptyListOfBool))
 
-should evaluate to False.
+=> should evaluate to False.
 
 anyTrue EmptyListOfBool
 
-should evaluate to False.
+=> should evaluate to False.
 
 -}
 
@@ -304,35 +304,35 @@ values they should evaluate to once the function is working:
 
 appendList EmptyList EmptyList
 
-should evaluate to EmptyList
+=> should evaluate to EmptyList
 
 appendList EmptyList (Element 1 EmptyList)
 
-should evaluate to Element 1 EmptyList
+=> should evaluate to Element 1 EmptyList
 
 appendList (Element 1 EmptyList) EmptyList
 
-should evaluate to Element 1 EmptyList
+=> should evaluate to Element 1 EmptyList
 
 appendList (Element 1 EmptyList) (Element 2 EmptyList)
 
-should evaluate to Element 1 (Element 2 EmptyList)
+=> should evaluate to Element 1 (Element 2 EmptyList)
 
 appendList (Element 2 EmptyList) (Element 1 EmptyList)
 
-should evaluate to Element 2 (Element 1 EmptyList)
+=> should evaluate to Element 2 (Element 1 EmptyList)
 
 appendList (Element 1 (Element 2 (Element 3 EmptyList))) (Element 2 EmptyList)
 
-should evaluate to Element 1 (Element 2 (Element 3 (Element 2 EmptyList)))
+=> should evaluate to Element 1 (Element 2 (Element 3 (Element 2 EmptyList)))
 
 appendList (Element 1 (Element 2 (Element 3 EmptyList))) (Element 4 (Element 5 EmptyList))
 
-should evaluate to Element 1 (Element 2 (Element 3 (Element 4 (Element 5 EmptyList))))
+=> should evaluate to Element 1 (Element 2 (Element 3 (Element 4 (Element 5 EmptyList))))
 
 appendList (Element 4 (Element 5 EmptyList)) (Element 1 (Element 2 (Element 3 EmptyList)))
 
-should evaluate to Element 4 (Element 5 (Element 1 (Element 2 (Element 3 EmptyList))))
+=> should evaluate to Element 4 (Element 5 (Element 1 (Element 2 (Element 3 EmptyList))))
 
 The function type signature is provided for you.
 
