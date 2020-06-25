@@ -273,8 +273,18 @@ encounter? How might you fix it?
 lastInteger :: ListOfInteger -> Integer
 lastInteger _ = undefined
 
-{- Challenge exercises.
 
+
+{- ****
+
+Now stop here and once again resume Lesson4, starting where you left
+off at the section named "Integers do grow on trees."
+
+**** -}
+
+
+
+{- Challenge exercises.
 The next two exercises are rather difficult. Give them a try and see
 how you do, but don't be too concerned if you can't figure them out.
 Feel free to ask the instructor for help, if you need it. -}
