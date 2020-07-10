@@ -135,6 +135,17 @@ time we won't even give you the signature!
 Write a polymorphic append function. Given two lists, it should combine them
 into one which contains all the elements of the first list (in the same order
 as the original), followed by all the elements of the second.
+
+After you have done so, uncomment the following code to gain access to the
+reverse function from the lesson. (This will be needed in the second part of
+the exercises.)
+
+single :: forall r . r -> List r
+single x = Element x EmptyList
+
+reverse :: forall r . List r -> List r
+reverse EmptyList = EmptyList
+reverse (Element x l) = append (reverse l) (single x)
 -}
 
 -- TODO: DREW: 5.6 are new - should be added to the extra-lesson4 exercises
