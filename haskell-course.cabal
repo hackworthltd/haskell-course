@@ -30,6 +30,7 @@ common exts
   default-language:   Haskell2010
   default-extensions:
     NoImplicitPrelude
+    ExplicitForAll
     NegativeLiterals
     OverloadedStrings
 
@@ -62,6 +63,7 @@ library
     Lesson4
     Lesson4_Part2
     Lesson4_Part3
+    Lesson5_Part1
     Lib.Lesson1
     Lib.Lesson2_Part1
     Lib.Lesson2_Part2
@@ -70,3 +72,4 @@ library
     Lib.Lesson4
     Lib.Lesson4_Part2
     Lib.Lesson4_Part3
+    Lib.Lesson5_Part1
