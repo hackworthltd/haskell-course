@@ -1,6 +1,6 @@
 {
     "hacknix": {
-        "branch": "master",
+        "branch": "main",
         "description": "Hackworth Ltd's nix overlays and modules.",
         "homepage": "",
         "owner": "hackworthltd",
@@ -12,7 +12,7 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "haskell-hacknix": {
-        "branch": "master",
+        "branch": "main",
         "description": "Hackworth Ltd's haskell.nix overlay.",
         "homepage": "",
         "owner": "hackworthltd",
